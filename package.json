@@ -1,0 +1,24 @@
+{
+  "name": "vue3-typescript-admin-template",
+  "version": "1.0.0",
+  "description": "This a vue@next and typescript admin template",
+  "main": "./src/index.js",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1999hk/vue3-typescript-admin-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1999hk/vue3-typescript-admin-template/issues"
+  },
+  "homepage": "https://github.com/1999hk/vue3-typescript-admin-template#readme"
+}
