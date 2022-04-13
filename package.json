@@ -4,12 +4,24 @@
   "description": "This a vue@next and typescript admin template",
   "main": "./src/index.js",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.7",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "style-loader": "^3.3.1",
     "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "npm run dev",
+    "dev": "webpack --mode='development' --config webpack.config.js",
+    "build": "webpack --mode='production'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +32,11 @@
   "bugs": {
     "url": "https://github.com/1999hk/vue3-typescript-admin-template/issues"
   },
-  "homepage": "https://github.com/1999hk/vue3-typescript-admin-template#readme"
+  "homepage": "https://github.com/1999hk/vue3-typescript-admin-template#readme",
+  "dependencies": {
+    "vue": "^3.2.32"
+  },
+  "browserslist": [
+    "last 2 versions, > 1%"
+  ]
 }
