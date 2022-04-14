@@ -1,7 +1,7 @@
-// import bar from './a'
-// import css from './style/index.less'
-// bar()
-console.log('hello webpack');
+import bar from './a'
+import css from './style/index.less'
+bar()
+console.log('hello world!');
 // console.log('ddd')
 // console.log('bbb')
 
