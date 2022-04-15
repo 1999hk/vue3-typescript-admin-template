@@ -1,5 +1,5 @@
-// import bar from './a'
-// import css from './style/index.less'
+import bar from './a'
+import css from './style/index.less'
 // bar()
 console.log('hello webpack');
 // console.log('ddd')

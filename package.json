@@ -5,8 +5,10 @@
   "main": "./src/index.js",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.7",
+    "glob": "^8.0.1",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
@@ -20,7 +22,8 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack --mode='development' --config webpack.config.js",
+    "dev": "webpack-dev-server --open --hot --mode='development' --config webpack.config.js",
+    "map": "webpack --mode='production' --config webpack.map.js",
     "build": "webpack --mode='production'"
   },
   "repository": {
