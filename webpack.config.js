@@ -5,8 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
 
-console.log(process.env.NODE_ENV)
-
 module.exports = {
 
   entry: {
@@ -14,8 +12,9 @@ module.exports = {
   },
 
   output: {
-    filename: '[name]_[chunkhash:8].js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'app.bunlde.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPaht: 'dist/'
   },
 
   devServer: {
@@ -27,12 +26,25 @@ module.exports = {
       {
         test: /\.(le|c)ss$/,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode ? 'style-loader' : {
+            loader: MiniCssExtractPlugin.loader
+          },
           'css-loader',
           'postcss-loader',
           'less-loader'
         ]
-      }
+      },
+      {
+        test: /\.(png|jpe?g|svg|gif|webp)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/',
+            publicPaht: '../'
+          }
+        }
+      },
     ]
   },
 
@@ -45,7 +57,7 @@ module.exports = {
     : [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: 'css/[name]_[contenthash:8].css'
+        filename: 'css/[name].css'
       })
     ]
   )

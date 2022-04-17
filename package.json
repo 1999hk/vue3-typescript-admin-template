@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
   "repository": {
@@ -26,20 +26,24 @@
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
   },
   "browserslist": [
-      "last 2 version",
-      "> 2%",
-      "not ie < 8"
+    "last 2 versions",
+    "> 1%",
+    "not ie < 8"
   ]
 }

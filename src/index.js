@@ -1,9 +1,16 @@
 import bar from './a'
 import css from './style/index.less'
+// import logo from './assets/images/head.jpg'
 bar()
 console.log('hello world!');
+console.log('bushoaaaaa');
 // console.log('ddd')
 // console.log('bbb')
+
+// const root = document.getElementById('app')
+// const img = new Image()
+// img.src = logo
+// root.append(img)
 
 // import { createApp } from 'vue'
 
