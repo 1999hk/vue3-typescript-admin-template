@@ -1,9 +1,17 @@
 import bar from './a'
 import css from './style/index.less'
+// import logo from './assets/images/logo.jpg'
 // bar()
 console.log('hello webpack');
 // console.log('ddd')
 // console.log('bbb')
+
+// const root = document.getElementById('counter')
+// const img = new Image()
+// img.src = logo
+// root.append(img)
+
+
 
 // import { createApp } from 'vue'
 

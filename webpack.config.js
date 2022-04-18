@@ -1,9 +1,7 @@
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
 
 module.exports = {
   entry: {
@@ -24,6 +22,18 @@ module.exports = {
           'less-loader'
         ]
       },
+      {
+        test: /\.(jpg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 1024 * 11,
+            name: '[name].[ext]',
+            outputPath: 'images',
+            publicPaht: '../'
+          }
+        }
+      }
     ]
   },
   plugins: [
