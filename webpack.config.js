@@ -11,6 +11,11 @@ module.exports = {
     filename: '[name]_[chunkhash:8].js',
     path: path.resolve(__dirname, 'dist')
   },
+
+  devServer: {
+    hot: true
+  },
+
   module: {
     rules: [
       {
@@ -33,6 +38,12 @@ module.exports = {
             publicPaht: '../'
           }
         }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },

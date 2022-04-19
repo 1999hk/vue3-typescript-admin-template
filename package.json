@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --open --hot --mode='development' --config webpack.config.js",
+    "dev": "webpack-dev-server --open --hot=true --mode='development' --config webpack.config.js",
     "map": "webpack --mode='production' --config webpack.map.js",
     "build": "webpack --mode='production' --config webpack.config.js"
   },
